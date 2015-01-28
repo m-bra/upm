@@ -7,7 +7,6 @@ It is yet to be planned (not to speak of the implementation...)
 
 upm will:
  * be **convenient to use** for both the packager and user
- * have the same steps for the user - no reading of ReadMes, ever!
  * be **independent** from platform, language and servers
  * be **transparent** to the packager
  * be **liberal** about the structure of a package
