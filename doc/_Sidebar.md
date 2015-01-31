@@ -1,0 +1,7 @@
+[Home](https://github.com/m-bra/upm/wiki)  
+[Syntax](https://github.com/m-bra/upm/wiki/Syntax)  
+[Package scopes](https://github.com/m-bra/upm/wiki/Package-scopes-and-Archives)  
+[Package identifiers](https://github.com/m-bra/upm/wiki/Package-identifiers)  
+[Dependencies](https://github.com/m-bra/upm/wiki/Dependencies)  
+[Structure of a Package](https://github.com/m-bra/upm/wiki/Structure-of-a-package)   
+[Commands](https://github.com/m-bra/upm/wiki/Commands)   
