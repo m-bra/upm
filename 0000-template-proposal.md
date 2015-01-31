@@ -1,5 +1,7 @@
 # Title
 
+To create a proposal, copy this template proposal, replace the texts in the sections, remove this section, save it as proposals/0000-&lt;proposal name&gt;.md, and make a pull request. **The pull request is important, so that the proposal can be discussed and optionally rejected!**
+
 ## Motivation  
 Explain here, why you are making this proposal.  
 Which problem does it solve?  
@@ -10,7 +12,7 @@ Summarize the proposal here so that it is understandable. Explain to a person wh
 Provide all the information that is *necessary*. Don't give too much, but also not too few.  
 
 ## Advantages
-Why is your proposal good?
+Why is your proposal good, and better than the existing methods (if any)?
 
 ## Disadvantages
 Yes, we're not all perfect. Find the bad things in your proposal!  
