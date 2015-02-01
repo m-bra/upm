@@ -14,7 +14,7 @@ upm will:
  * be compatible to and convertible from other systems
 
 ## Manual
-We are using the [github wiki](https://github.com/m-bra/upm/wiki)
+In the `doc` folder.
 
 ## Contributing
 You can help this totally serious project by:
@@ -22,4 +22,8 @@ You can help this totally serious project by:
  * Ranting about bad design
  * Sharing your ideas
  * Fixing bugs for us
- * Joining our team if you got time!
+ * Joining our team if you got time! 
+
+How?
+ * Create an issue
+ * Fork this project, create a topic branch, hack
