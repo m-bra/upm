@@ -15,7 +15,7 @@ Will `get` if the package is not found on your computer unless `--no-get` is spe
 
 **`uninstall <package-identifier>`**
 Executes the uninstall script of the package, which will uninstall the **global installation**.
-To "uninstall" a local install, just delete the directory, idiot!
+To "uninstall" a loose install, just delete the directory, idiot!
 Problem: confusion with `remove`
 
 ***
@@ -37,7 +37,7 @@ Lists all registered servers.
 
 **`search [--first | --one] [--all] [<servers>] <package-identifier>`**
 
-Search the given servers or all registered servers (if no server is given) for the global `package-identifier` and print all matching packages.  
+Search the given servers or all registered servers (if no server is given) for the maintained `package-identifier` and print all matching packages.  
 If `--first` is given, it will only print the first matching packages.  
 If `--one` is given, it will fail if there is not exactly one matching package.  
 Unless `--all` is given, it will print only the highest version for each package name.  
@@ -52,11 +52,11 @@ Fails if no package is returned by `search` and lets you choose if multiple pack
 
 ***
 
-**`remove [(-l | --local)] <package-identifier>`**  
+**`remove [(-l | --loose)] <package-identifier>`**  
 
 Removes the package matching `package-identifier`.  
-Will fail if package is local but neither of `-l` or `--local` is given.  
-Will fail if package is global but `-l` or `--local` is given.  
+Will fail if package is loose but neither of `-l` or `--loose` is given.  
+Will fail if package is maintained but `-l` or `--loose` is given.  
 After that, upm will check if the package *is* a upm package using `verify`.
 
 ***
@@ -91,7 +91,7 @@ If `package-ident-to` is not complete, the omitted information will be taken by 
 For example: `copy gcc@4.8 @4.9` will copy to `gcc@4.9`  
 Will `load` the new package at `<package-ident-to>` e.g. the newly created package.
 
-Use to make local packages global or copy packages between archives.  
+Use to make loose packages maintained or copy packages between archives.  
 For example: `copy clang ./` will copy clang to `./clang`, e.g. right in front of you :smile:.
 
 ***
@@ -109,7 +109,7 @@ Does the same as `copy` but ensures that the package will be copied from this co
 
 **`move [(-f | --force)] <package-ident-from> <package-ident-to>`**  
 
-Same effect as `copy` and `remove [--local] <package-ident-from>` afterwards.
+Same effect as `copy` and `remove [--loose] <package-ident-from>` afterwards.
 
 ***
 
