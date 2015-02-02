@@ -120,6 +120,13 @@ That means it updates the meta data of the package.
 
 ***
 
+**`env`**  
+Prints information about the environment with one key-value-binding for each line.  
+Keys:
+ * platform - Prints information about the platform
+
+***
+
 **`install-pkg-dep <package-identifier>`**  
 
 Will `install` all package dependencies of the package matching `package-identifier` to their respective directories.
