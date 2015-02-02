@@ -1,4 +1,6 @@
 # upm
+
+[![Join the chat at https://gitter.im/upm-developers/upm](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/upm-developers/upm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Universal Package Manager - package your code on any platform, with any language!
 
 ## Description
