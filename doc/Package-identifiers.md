@@ -29,16 +29,14 @@ For `<op>`:
  * `>-<` - matches all versions in between, excluding both.
 
 The version has to be a list separated by dots, where each element is a sequence of numbers and letters, and optionally followed by a underscore with a text (the **flag**) following.
-Right: `12.5.a`, `12`, `A.1.0`, `1.2.b_debug`  
+Right: `12.5.a`, `12`, `A.1.0`, `1.2.b_debug`, `1.3_unfree_debug`
  
-If no flag is specified but there is a underscore (as in `3.0_`), then only packages without flags will pass.
-If no flag and underscore is specified, any flag will pass through the identifier.  
-For example: `cmake@3.1.1_debug` will not pass through `cmake@3.1.1_` but `cmake@3.1.1`
-
+By default, a version with flags (e.g. `1_a_b_c`) fits through an identifier even if it got more flags than specified in the identifier (e.g. will still pass if identifier is `1_a`).  
+However, if the version identifier ends with an underscore, matching versions have to have exactly the same flags (unless there is a wildcard) (e.g. the version `2_a_b` wont fit through `2_a_`.
 
 ### Wildcards
 
-`*` acts as a wildcard for an element in the number list of the version.  
+`*` acts as a wildcard for an element in the number or flag list of the version.  
 So `upm@0.1.1` and `upm@0.1.12` will match for `upm@0.1.*`, even if `12` is two characters.  
 You can also use limits as wildcards, for example `upm@0.1.13` will pass to `upm@0.1.>2`, whereas `upm@0.1.1` will not, because the last number is smaller. And `upm@0.2.1` will not pass either because the second number is different.  
 Possible operations are: `>`, `>=`, `<`, `<=`  
