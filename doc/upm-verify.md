@@ -1,1 +1,0 @@
-This page explains in detail what this command does
