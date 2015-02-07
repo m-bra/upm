@@ -2,4 +2,4 @@
 
 name = "upm"
 version = "0.0.1"
-authors = "Merlin Brandt <merlin.brandt@hotmail.de>"
+authors = ["Merlin Brandt <merlin.brandt@hotmail.de>"]
