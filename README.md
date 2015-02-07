@@ -1,4 +1,6 @@
 # upm
+
+[![Join the chat at https://gitter.im/upm-developers/upm](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/upm-developers/upm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Universal Package Manager - package your code on any platform, with any language!
 
 ## Description
@@ -14,7 +16,7 @@ upm will:
  * be compatible to and convertible from other systems
 
 ## Manual
-We are using the [github wiki](https://github.com/m-bra/upm/wiki)
+In the `doc` folder.
 
 ## Contributing
 You can help this totally serious project by:
@@ -22,4 +24,8 @@ You can help this totally serious project by:
  * Ranting about bad design
  * Sharing your ideas
  * Fixing bugs for us
- * Joining our team if you got time!
+ * Joining our team if you got time! 
+
+How?
+ * Create an issue
+ * Fork this project, create a topic branch, hack
