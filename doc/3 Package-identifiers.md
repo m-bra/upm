@@ -1,11 +1,11 @@
 Every time upm has to know about a package you provide it an **identifier**. The problem is, that, given one identifier, upm has to know which exact package you meant, which can be difficult if there are many packages.
 
-## Identifiers for local packages
-Local identifiers are easy. They are just a path to your package, either absolute or relative.  
+## Identifiers for loose packages
+Loose identifiers are easy. They are just a path to your package, either absolute or relative.  
 If you have a relative path, begin your path with `./`.
 If you have an absolute path, begin your path with `/` on Unix or `X:` on Windows (with X being the disk).
 
-## Identifiers for global packages
+## Identifiers for maintained packages
 Each package has a **server**, **group**, a **name**, and a **version**.  
 An identifier consists of the name and optionally the server, group and/or version of the package.  
 There are full identifiers which give all the information, which can only match exactly one or no package *in the entire freaking world* (or the entire server if server is omitted).  
@@ -56,7 +56,7 @@ For example:
 `@1.3-unfree-debug`
 
 ### Versions as filters
- 
+
 Versions are also filters. They only let versions through which have the same beginning of the numbers list and the same beginning of the flags list.  
 If you want the version filter to match versions which have *exactly* the same numbers list, end the numbers with a dot. End the flags list with an underscore to achieve the same effect.  
 
@@ -70,7 +70,7 @@ For example:
 Versions as filters have a more generic form; they are wildcards which let versions through as values. That means they can be combined (like `12.5|11.1`) and do not have to start with `@` since wildcards dont either.  
 
 ### Numbers and flags as filters
-Also, one number or flag of a version can also act as a filter (Technically, they are always filters, including filters which only fit with one exact value). 
+Also, one number or flag of a version can also act as a filter (Technically, they are always filters, including filters which only fit with one exact value).
 
 That's why this works:  
 `1.1.*`  
