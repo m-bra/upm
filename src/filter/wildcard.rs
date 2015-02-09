@@ -44,7 +44,34 @@ pub enum Condition<T> {
     Gt(T), Ge(T),
 }
 
+pub enum WildCardErr {
+    UnmatchedBracket,
+}
+
+pub type WildCardResult<T> = Result<T, WildCardErr>;
+
 impl<T> WildCard<T> {
+    pub fn parse(string: &str) -> WildCardResult<Self> {
+        // remove optional brackets
+        let mut prepared = String::new();
+        let mut bracket_counter = 0;
+        for c in string.chars() {
+            match c {
+                '(' => bracket_counter+= 1,
+                ')' => bracket_counter-= 1,
+                _ => prepared.push(c),
+            }
+        }
+
+        if bracket_counter != 0 {
+            return Err(WildCardErr::UnmatchedBracket)
+        }
+
+        // groups: lt: less than, le: less or equal, gt, ge, eq, ne: not equal, x: the value, and, or, xor, nxt: the next wildcard
+        let re = regex!(r"^(?P<lt><)|(?P<le><=)|(?P<gt>>)|(?P<ge>>=)|(?P<eq>=?)|(?P<ne>!)(?P<x>[^&\|\^]+)(?P<and>&)|(?P<or>\|)|(?P<xor>\^)(P<nxt>.*)$");
+        unimplemented!();
+    }
+
     pub fn new(cond: Condition<T>) -> Self {
         WildCard (cond, None)
     }
