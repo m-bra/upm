@@ -16,18 +16,12 @@ Whitespace in both key and value will be trimmed.
 ## The main script
 The `.upm-package-load.*` is the main script. It is used to dynamically generate the meta file .
 
-Before calling the main script, upm will read everything you have already put there. upm will then put some predefined values into the file which the main script can use. Then the main script is called which can put even more bindings in the meta file.  
+Before calling the main script, upm will read everything you have already put there. Then the main script is called which can put more bindings in the meta file.  
 
-The main script gets called whenever the package moves its location. However, it may not be called if the package has been moved manually (if it is loose).
+The main script gets called whenever the package moves its location. However, it may not be called if the package has been moved manually (if it is loose) (Yes, this is a problem).
 
 ## No main script
 If there is no main script, upm just uses the meta file as it is.
-
-## Keys written by upm
-These keys will be put into the meta file before calling the main script:
- * `platform`: either `Windows`, `Unix` or `Mac` according to the platform the package is loaded in.
- * `package-path`: the path to the package
- * `is-maintained`
 
 ## Keys read by upm
  * `name` *(default: name of package directory)*  
