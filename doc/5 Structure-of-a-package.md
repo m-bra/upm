@@ -1,7 +1,8 @@
 upm will let you decide how you want to structure your package, it makes as few restrictions as possible.  
 However, it somehow *has* to read your package, so you have to do at least one of these:  
   1. Create a script called `.upm-package-load.*` in the root of your package.  
-  2. Create a config file called `.upm-package-meta`
+  2. Create a config file called `.upm-package-meta`  
+
 You can leave out the dot at the beginning if you want, it's just there to hide the file on unix if you want.
 
 ## The meta file
