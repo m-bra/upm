@@ -1,7 +1,8 @@
 upm will let you decide how you want to structure your package, it makes as few restrictions as possible.  
 However, it somehow *has* to read your package, so you have to do at least one of these:  
   1. Create a script called `.upm-package-load.*` in the root of your package.  
-  2. Create a config file called `.upm-package-meta`
+  2. Create a config file called `.upm-package-meta`  
+
 You can leave out the dot at the beginning if you want, it's just there to hide the file on unix if you want.
 
 ## The meta file
@@ -17,7 +18,7 @@ The `.upm-package-load.*` is the main script. It is used to dynamically generate
 
 Before calling the main script, upm will read everything you have already put there. upm will then put some predefined values into the file which the main script can use. Then the main script is called which can put even more bindings in the meta file.  
 
-The main script gets called whenever the package moves its location. However, it may not be called if the package has been moved manually (if it is local).
+The main script gets called whenever the package moves its location. However, it may not be called if the package has been moved manually (if it is loose).
 
 ## No main script
 If there is no main script, upm just uses the meta file as it is.
@@ -26,7 +27,7 @@ If there is no main script, upm just uses the meta file as it is.
 These keys will be put into the meta file before calling the main script:
  * `platform`: either `Windows`, `Unix` or `Mac` according to the platform the package is loaded in.
  * `package-path`: the path to the package
- * `is-global`
+ * `is-maintained`
 
 ## Keys read by upm
  * `name` *(default: name of package directory)*  
